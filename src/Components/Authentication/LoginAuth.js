@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Paper, TextField, Box, Select, MenuItem,FormControl, InputLabel } from "@mui/material";
-import "./Login.css";
+import "./AuthForm.css";
 const Login = () => {
   const [toggleLoginType, setToggleLoginType] = useState(1);
   return (
@@ -102,6 +102,7 @@ const Login = () => {
                   type={"password"}
                 />
               </div>
+              <Button variant="contained">Contained</Button>
             </Box>
           </form>
         </div>

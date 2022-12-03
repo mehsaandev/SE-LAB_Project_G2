@@ -1,0 +1,17 @@
+.paperDesign{
+    height: 80%;
+    width: 70%;
+   
+    /* display: flex;
+    justify-content: center; */
+    margin-right: 1rem;
+}
+
+.title{
+    color: #2e2e2ede;
+    text-align: center;
+}
+.authForm{
+    display: flex;
+    justify-content: center;
+}

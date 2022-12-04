@@ -10,9 +10,16 @@ import {
   Button,
 } from "@mui/material";
 import "./AuthForm.css";
-const RegisterAuth = ({userType}) => {
+import ToggleButton from "../Custom Buttons/ToggleButton";
+const RegisterAuth = () => {
+  const [userType, setUserType] = useState(true);
+
   return (
     <>
+      <div style={{ display: "flex", justifyContent: "right", margin: "10px" }}>
+        <ToggleButton setType={setUserType} type={userType} />
+      </div>
+      <h1 className="title">Register as {userType ? "Student" : "Teacher"}</h1>
       <div className="authForm">
         <form>
           <Box
@@ -35,18 +42,13 @@ const RegisterAuth = ({userType}) => {
             </div>
             <div>
               {userType ? (
-
                 <TextField
                   required
                   id="outlined-required"
                   label="Registration Number"
                 />
               ) : (
-                <TextField
-                required
-                id="outlined-required"
-                label="Teacher ID"
-              />
+                <TextField required id="outlined-required" label="Teacher ID" />
               )}
               <TextField required id="outlined-required" label="CNIC" />
             </div>
@@ -81,16 +83,15 @@ const RegisterAuth = ({userType}) => {
             }}
           >
             {userType && (
-
-            <div>
-              <TextField
-                required
-                id="outlined-required"
-                type={"Number"}
-                label="Session"
-              />
-              <TextField required id="outlined-required" label="Section" />
-            </div>
+              <div>
+                <TextField
+                  required
+                  id="outlined-required"
+                  type={"Number"}
+                  label="Session"
+                />
+                <TextField required id="outlined-required" label="Section" />
+              </div>
             )}
 
             <div>
@@ -107,8 +108,13 @@ const RegisterAuth = ({userType}) => {
                 type={"password"}
               />
             </div>
-            <div style={{display: 'flex', justifyContent: 'center'}}> 
-              <Button variant="contained" style={{marginBottom: '5px'}}>Register</Button>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <Button
+                variant="contained"
+                style={{ marginBottom: "5px", borderRadius: "3rem" }}
+              >
+                Register
+              </Button>
             </div>
           </Box>
         </form>

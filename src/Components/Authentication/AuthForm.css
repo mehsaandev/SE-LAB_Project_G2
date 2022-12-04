@@ -1,13 +1,14 @@
 .paperDesign{
     min-height: 80%;
-    width: 70%;
+    width: 100%;
     margin-right: 1rem;
    
 }
 
 .title{
-    color: #2e2e2ede;
+    color: #1565c0;
     text-align: center;
+    font-weight: 400;
 }
 .authForm{
     display: flex;

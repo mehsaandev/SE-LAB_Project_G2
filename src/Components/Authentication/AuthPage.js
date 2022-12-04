@@ -1,36 +1,33 @@
 import React, { useState } from "react";
 import Register from "./RegisterAuth";
+import Login from "./LoginAuth";
 import ToggleButton from "../Custom Buttons/ToggleButton";
+import AuthWelcome from "./AuthWelcome";
 import { Paper } from "@mui/material";
 
 import "./AuthPage.css";
 import "./AuthForm.css";
 const AuthPage = () => {
-  const [userType, setUserType] = useState(true);
   const [authType, setAuthType] = useState(false);
 
   return (
-    <div className="authPage">
-      <Paper
-        className="paperDesign"
-        variant="outlined"
-        style={{
-          borderStartStartRadius: "7rem",
-          borderEndStartRadius: "7rem",
-          backgroundColor: "rgb(255 255 255 / 82%)",
-        }}
-      >
-        <div
-          style={{ display: "flex", justifyContent: "right", margin: "10px" }}
+    <div style={{ display: "flex", alignItems: "center", height: "100%" }}>
+      <div style={{ width: "50%" }}>
+        <AuthWelcome type={authType} setType={setAuthType} />
+      </div>
+      <div className="authPage">
+        <Paper
+          className="paperDesign"
+          variant="outlined"
+          style={{
+            borderStartStartRadius: "7rem",
+            borderEndStartRadius: "7rem",
+            backgroundColor: "rgb(255 255 255 / 82%)",
+          }}
         >
-          <ToggleButton setType={setUserType} type={userType}/>
-        </div>
-        <h2 className="title">
-          Register as {userType ? "Student" : "Teacher"}
-        </h2>
-
-        <Register userType={userType} />
-      </Paper>
+          {authType ? <Register />  : <Login />}
+        </Paper>
+      </div>
     </div>
   );
 };

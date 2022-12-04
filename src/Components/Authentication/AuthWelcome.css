@@ -1,0 +1,11 @@
+.center{
+    text-align: center;
+}
+
+.welcomeContainer{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}

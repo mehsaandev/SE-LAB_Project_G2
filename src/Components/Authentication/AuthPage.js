@@ -11,22 +11,17 @@ const AuthPage = () => {
   const [authType, setAuthType] = useState(false);
 
   return (
-    <div style={{ display: "flex", alignItems: "center", height: "100%" }}>
+    <div  className="authContainer">
       <div style={{ width: "50%" }}>
         <AuthWelcome type={authType} setType={setAuthType} />
       </div>
       <div className="authPage">
-        <Paper
+        <div
           className="paperDesign"
           variant="outlined"
-          style={{
-            borderStartStartRadius: "7rem",
-            borderEndStartRadius: "7rem",
-            backgroundColor: "rgb(255 255 255 / 82%)",
-          }}
         >
-          {authType ? <Register />  : <Login />}
-        </Paper>
+          {authType ? <Register  setAuthType={setAuthType}/>  : <Login setAuthType={setAuthType}/>}
+        </div>
       </div>
     </div>
   );

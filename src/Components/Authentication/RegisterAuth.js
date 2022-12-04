@@ -8,11 +8,21 @@ import {
   FormControl,
   InputLabel,
   Button,
+  Typography
 } from "@mui/material";
 import "./AuthForm.css";
 import ToggleButton from "../Custom Buttons/ToggleButton";
-const RegisterAuth = () => {
+const RegisterAuth = ({setAuthType}) => {
   const [userType, setUserType] = useState(true);
+
+
+
+  const toggleAuthType = (e) =>{
+    e.preventDefault()
+    
+    setAuthType(false)
+  }
+
 
   return (
     <>
@@ -108,7 +118,17 @@ const RegisterAuth = () => {
                 type={"password"}
               />
             </div>
-            <div style={{ display: "flex", justifyContent: "center" }}>
+            <div className="registerBtnSection">
+              <div className="authToggleLogin">
+                <Typography variant="subtitle1" gutterBottom>
+                Already have account?
+                  <a href="" onClick={toggleAuthType}>
+                    {" "}
+                    Login
+                  </a>
+                </Typography>
+              </div>
+
               <Button
                 variant="contained"
                 style={{ marginBottom: "5px", borderRadius: "3rem" }}

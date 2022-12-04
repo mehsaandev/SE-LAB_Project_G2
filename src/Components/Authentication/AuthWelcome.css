@@ -2,10 +2,32 @@
     text-align: center;
 }
 
-.welcomeContainer{
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
+
+
+
+@media only screen and (min-width: 770px) {
+    .welcomeContainer{
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+  }
+  
+@media only screen and (max-width: 769px) {
+    .authToggle{
+    display: none;
+    }
+    .welcomeContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .welcome{
+        margin-top: 1rem;
+    }
+    
+  }

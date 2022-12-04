@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Typography, Button, Fade } from "@mui/material";
 import "./AuthWelcome.css";
 
@@ -9,7 +9,7 @@ const AuthWelcome = ({ setType, type }) => {
 
   return (
     <div className="welcomeContainer">
-      <div>
+      <div className="welcome">
         <Typography className="center" variant="h3" color="white" gutterBottom>
           Welcome
         </Typography>
@@ -25,7 +25,7 @@ const AuthWelcome = ({ setType, type }) => {
             : "Access your account "}
         </Typography>
       </div>
-      <div>
+      <div className="authToggle">
         <Typography color="#dbdbdb" variant="subtitle1" gutterBottom>
           {type ? "Already have account?" : "No Account?"}
         </Typography>

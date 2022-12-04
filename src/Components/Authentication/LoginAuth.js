@@ -10,8 +10,13 @@ import {
 } from "@mui/material";
 import "./AuthForm.css";
 import ToggleButton from "../Custom Buttons/ToggleButton";
-const RegisterAuth = () => {
-  const [userType, setUserType] = useState(true);
+const RegisterAuth = ({setAuthType}) => {
+
+  const toggleAuthType = (e) =>{
+    e.preventDefault()
+    
+    setAuthType(true)
+  }
 
   return (
     <>
@@ -65,6 +70,12 @@ const RegisterAuth = () => {
             </div>
           </Box>
         </form>
+      </div>
+      <div className="authToggleLogin">
+        <Typography variant="subtitle1" gutterBottom>
+          No Account?
+          <a href="" onClick={toggleAuthType}> Register</a>
+        </Typography>
       </div>
     </>
   );

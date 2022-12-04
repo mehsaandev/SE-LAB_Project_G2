@@ -38,34 +38,36 @@ const RegisterAuth = ({setAuthType}) => {
             }}
           >
             <div>
-              <TextField required id="outlined-required" label="First Name" />
-              <TextField required id="outlined-required" label="Last Name" />
+              <TextField className="btnMaxField" required id="outlined-required" label="First Name" />
+              <TextField className="btnMaxField" required id="outlined-required" label="Last Name" />
             </div>
             <div>
               <TextField
+              className="btnMaxField"
                 required
                 id="outlined-required"
                 label="Email"
                 type={"email"}
               />
-              <TextField required id="outlined-required" label="Phone Number" />
+              <TextField className="btnMaxField" required id="outlined-required" label="Phone Number" />
             </div>
             <div>
               {userType ? (
                 <TextField
+                className="btnMaxField"
                   required
                   id="outlined-required"
                   label="Registration Number"
                 />
               ) : (
-                <TextField required id="outlined-required" label="Teacher ID" />
+                <TextField className="btnMaxField" required id="outlined-required" label="Teacher ID" />
               )}
-              <TextField required id="outlined-required" label="CNIC" />
+              <TextField className="btnMaxField" required id="outlined-required" label="CNIC" />
             </div>
           </Box>
           <Box>
-            <FormControl >
-              <InputLabel id="demo-simple-select-fullwidth-label">
+            <FormControl  className="btnMaxSelectField">
+              <InputLabel  id="demo-simple-select-fullwidth-label">
                 Select Department
               </InputLabel>
               <Select
@@ -95,25 +97,27 @@ const RegisterAuth = ({setAuthType}) => {
             {userType && (
               <div>
                 <TextField
-                
+                className="btnMaxField"
                   // style={{width: '20ch'}}
                   required
                   id="outlined-required"
                   type={"Number"}
                   label="Session"
                 />
-                <TextField  required  id="outlined-required" label="Section" />
+                <TextField className="btnMaxField" required  id="outlined-required" label="Section" />
               </div>
             )}
 
             <div>
               <TextField
+              className="btnMaxField"
                 required
                 id="outlined-required"
                 label="Password"
                 type={"password"}
               />
               <TextField
+              className="btnMaxField"
                 required
                 id="outlined-required"
                 label="Confirm Password"

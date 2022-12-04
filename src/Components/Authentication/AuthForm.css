@@ -27,9 +27,10 @@
     justify-content: center;
     margin-top: 1rem;
   }
-  .css-1nrlq1o-MuiFormControl-root{
-    width: 100%;
+  .btnMaxSelectField{
+    width: 97%;
   }
+  
 }
 
 /* Mobile Version */
@@ -59,13 +60,24 @@
     justify-content: space-between;
     margin-top: 1rem;
   }
-  .css-1nrlq1o-MuiFormControl-root{
+  /* .css-1nrlq1o-MuiFormControl-root {
     width: 100%;
+  } */
+  
+  .btnMaxSelectField{
+    width: 97%;
   }
+  /* .btnMaxField{
+    width: 90%;
+  } */
 }
 
 @media only screen and (max-width: 555px) {
-    .css-1u3bzj6-MuiFormControl-root-MuiTextField-root, .css-wb57ya-MuiFormControl-root-MuiTextField-root, .css-1nrlq1o-MuiFormControl-root{
+    /* .css-1u3bzj6-MuiFormControl-root-MuiTextField-root, .css-wb57ya-MuiFormControl-root-MuiTextField-root, .css-1nrlq1o-MuiFormControl-root {
+        width: 90%;
+      } */
+
+      .btnMaxField, .btnMaxSelectField{
         width: 90%;
       }
 }

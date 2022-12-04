@@ -34,7 +34,7 @@ const RegisterAuth = ({setAuthType}) => {
         <form>
           <Box
             sx={{
-              "& .MuiTextField-root": { m: 1, width: "25ch" },
+              "& .MuiTextField-root": { m: 1,},
             }}
           >
             <div>
@@ -64,7 +64,7 @@ const RegisterAuth = ({setAuthType}) => {
             </div>
           </Box>
           <Box>
-            <FormControl fullWidth>
+            <FormControl >
               <InputLabel id="demo-simple-select-fullwidth-label">
                 Select Department
               </InputLabel>
@@ -89,18 +89,20 @@ const RegisterAuth = ({setAuthType}) => {
 
           <Box
             sx={{
-              "& .MuiTextField-root": { m: 1, width: "25ch" },
+              "& .MuiTextField-root": { m: 1, },
             }}
           >
             {userType && (
               <div>
                 <TextField
+                
+                  // style={{width: '20ch'}}
                   required
                   id="outlined-required"
                   type={"Number"}
                   label="Session"
                 />
-                <TextField required id="outlined-required" label="Section" />
+                <TextField  required  id="outlined-required" label="Section" />
               </div>
             )}
 

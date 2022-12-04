@@ -3,15 +3,15 @@
   text-align: center;
   font-weight: 400;
 }
-.authForm {
-  display: flex;
-  justify-content: center;
-}
 
 /* Laptop Version */
 @media only screen and (min-width: 770px) {
+    .authForm {
+      display: flex;
+      justify-content: center;
+    }
   .paperDesign {
-    min-height: 80%;
+    min-height: 60%;
     width: 100%;
     margin-right: 1rem;
     border-start-start-radius: 7rem;
@@ -27,16 +27,25 @@
     justify-content: center;
     margin-top: 1rem;
   }
+  .css-1nrlq1o-MuiFormControl-root{
+    width: 100%;
+  }
 }
 
 /* Mobile Version */
 @media only screen and (max-width: 769px) {
+    .authForm {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
   .paperDesign {
     /* min-height: 80%; */
     width: 100%;
     margin: 1rem;
     border-radius: 1rem;
     background-color: rgb(255 255 255 / 82%);
+    padding: 0.5rem;
 
     display: flex;
     flex-direction: column;
@@ -50,4 +59,14 @@
     justify-content: space-between;
     margin-top: 1rem;
   }
+  .css-1nrlq1o-MuiFormControl-root{
+    width: 100%;
+  }
 }
+
+@media only screen and (max-width: 555px) {
+    .css-1u3bzj6-MuiFormControl-root-MuiTextField-root, .css-wb57ya-MuiFormControl-root-MuiTextField-root, .css-1nrlq1o-MuiFormControl-root{
+        width: 90%;
+      }
+}
+
